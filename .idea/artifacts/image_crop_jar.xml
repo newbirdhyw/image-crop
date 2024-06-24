@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="image-crop:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/image_crop_jar</output-path>
+    <root id="archive" name="image-crop.jar">
+      <element id="module-output" name="image-crop" />
+    </root>
+  </artifact>
+</component>
