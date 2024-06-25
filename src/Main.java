@@ -19,19 +19,20 @@ import javax.imageio.ImageIO;
 
 public class Main {
 
-	// private static final String INPUT_DATA_DIRECTORY = "/dreampost";
-	// private static final String OUTPUT_DATA_CROP_DIRECTORY = INPUT_DATA_DIRECTORY + "/dreampost_crop";
-	// private static final String LOG_DIRECTORY = INPUT_DATA_DIRECTORY + "/dreampost_crop_logs";
-
-	private static final String INPUT_DATA_DIRECTORY = "C:/Users/lena2/OneDrive/사진/world_vision";
-	private static final String OUTPUT_DATA_CROP_DIRECTORY = INPUT_DATA_DIRECTORY + "/dreampost_crop";
-	private static final String LOG_DIRECTORY = INPUT_DATA_DIRECTORY + "/dreampost_crop_logs";
+	private static String INPUT_DATA_DIRECTORY = "/dreampost";
+	private static String OUTPUT_DATA_CROP_DIRECTORY = INPUT_DATA_DIRECTORY + "/dreampost_crop";
+	private static String LOG_DIRECTORY = INPUT_DATA_DIRECTORY + "/dreampost_crop_logs";
 
 	private static int successCount = 0;
 	private static int failedCount = 0;
 	static StringBuffer stringBuffer = new StringBuffer();
 
 	public static void main(String[] args) {
+		if(args.length > 0) {
+			INPUT_DATA_DIRECTORY = args[0];
+			OUTPUT_DATA_CROP_DIRECTORY = INPUT_DATA_DIRECTORY + "/dreampost_crop";
+			LOG_DIRECTORY = INPUT_DATA_DIRECTORY + "/dreampost_crop_logs";
+		}
 
 		// INPUT 폴더가 없을 경우
 		if(!new File(INPUT_DATA_DIRECTORY).exists()) {
